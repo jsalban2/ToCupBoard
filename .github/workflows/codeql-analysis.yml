@@ -2,7 +2,7 @@ name: CodeQL Analysis for PHP
 
 on:
   schedule:
-    - cron: "0 3 * * *"  # Este cron lo ejecuta diariamente a las 3 AM UTC
+    - cron: "0 3 * * *"  # Ejecuta diariamente a las 3 AM UTC
   push:
     branches: [main]
   pull_request:
@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        language: [ 'php' ] 
+        language: [ 'php' ]
 
     steps:
     - name: Checkout repository
