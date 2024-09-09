@@ -1,0 +1,16 @@
+name: Dependency Review
+
+on:
+  schedule:
+    - cron: "0 2 * * *"  # Este cron lo ejecuta diariamente a las 2 AM UTC
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run dependency review
+      uses: github/dependency-review-action@v2
