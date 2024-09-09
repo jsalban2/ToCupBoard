@@ -1,0 +1,29 @@
+name: WordPress XML Backup
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 0 * * 1" # Esto ejecuta el flujo todos los lunes a la medianoche
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Create Backup of WordPress Content
+      run: |
+        mkdir -p backup
+        cp *.xml backup/backup_$(date +'%Y-%m-%d').xml
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add backup/
+        git commit -m "Backup XML content - $(date)"
+        git push
