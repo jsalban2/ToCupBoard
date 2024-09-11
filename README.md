@@ -11,11 +11,11 @@ Ubicación: reportes/reporte técnico.pdf
 Este informe está disponible en la carpeta reportes dentro del repositorio. Además habra un documento que detalla mejor las herramientas usadas (reportes/herramientas)
 
 
-# Carpeta de Informes
-La carpeta informes en el repositorio contiene resultados de las vulnerabilidades o monitoreo realizado
+# Carpeta de ESCANEOS
+La carpeta escaneos en el repositorio contiene resultados de las vulnerabilidades o monitoreo realizado, a partir de las cuales se realizaron modificaciones detalladas en los documentos del reporte técnico, por ejemplo, la edición en .htaccess para redireccionar de http a https y las cabeceras Http.
 
 # Configuración del Workflow de CI
-El archivo ci.yml en el directorio .github/workflows está configurado para realizar respaldos automáticos diarios del archivo XML de tu sitio WordPress. A continuación, se detalla la función del workflow:
+El archivo ci.yml en el directorio .github/workflows está configurado para realizar respaldos automáticos diarios del archivo XML de mi sitio WordPress. A continuación, se detalla la función del workflow:
 
 Creación de Directorio de Respaldo: Se crea un directorio llamado backup en el repositorio para almacenar el archivo de respaldo.
 Copia del Archivo XML: El archivo XML de WordPress se copia al directorio de respaldo con una marca de fecha en el nombre del archivo.
